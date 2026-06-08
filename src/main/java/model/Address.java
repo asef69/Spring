@@ -1,10 +1,17 @@
 package model;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-//@Entity
-//@Table(name="address")
-@Entity(name="addresses")
+import java.time.LocalDateTime;
+
+@Data
+@NoArgsConstructor
+@Entity
+@Table(name = "addresses")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
